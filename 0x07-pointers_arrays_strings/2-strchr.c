@@ -3,7 +3,7 @@
  * _strchr - use pointer
  * @s: String
  * @c: character
- * Return: Always 0 
+ * Return: Always 0 (success)
  */
 
 char *_strchr(char *s, char c)
