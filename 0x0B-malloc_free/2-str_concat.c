@@ -8,33 +8,42 @@
  * @s2: input two to concat
  * Return: concat of s1 and s2
  */
-
 char *str_concat(char *s1, char *s2)
 {
 char *c;
-int j, k;
-if (s1 == NULL)
-s1 = "";
-if (s2 == NULL)
-s2 = "";
-j = k = 0;
-while (s1[j] != '\0')
-j++;
-while (s2[k] != '\0')
-k++;
-c = malloc(sizeof(char) * (j + k + 1));
+unsigned int i = 0, j = 0, l = 0, m = 0;
+
+while (s1 && s1[l])
+l++;
+while (s2 && s2[m])
+m++;
+
+c = malloc(sizeof(char) * (l + m + 1));
 if (c == NULL)
 return (NULL);
-j = k = 0;
-while (s1[j] != '\0')
+
+i = 0;
+j = 0;
+
+if (s1)
 {
-c[j] = s1[j];
+while (i < l)
+{
+c[i] = s1[i];
+i++;
+}
+}
+
+if (s2)
+{
+while (i < (l + m))
+{
+c[i] = s2[j];
+i++;
 j++;
 }
-while (s2[k] != '\0')
-{
-c[j] = '\0';
-return (c);
-
 }
+c[i] = '\0';
 
+return (c);
+}
