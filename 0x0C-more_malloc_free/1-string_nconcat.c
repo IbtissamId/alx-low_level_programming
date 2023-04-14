@@ -29,6 +29,8 @@ while (i < k)
 str[i] = s1[i];
 i++;
 }
+while (n < l && i < (k + n))
+str[i++] = s2[j++];
 while (n >= l && i < (k + l))
 str[i++] = s2[j++];
 str[i] = '\0';
