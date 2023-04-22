@@ -20,6 +20,7 @@ void print_all(const char * const format, ...)
 		while (format[i])
 		{
 			switch (format[i])
+		{
 			case 'c':
 				printf("%s%c", sp, va_arg(l, int));
 				break;
@@ -45,3 +46,4 @@ void print_all(const char * const format, ...)
 }
 printf("\n");
 va_end(l);
+}
