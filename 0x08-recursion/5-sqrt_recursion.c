@@ -7,11 +7,11 @@
  */
 int c_root(int i, int r)
 {
-        if (r * r > i)
-                return (-1);
-        if (r * r == i)
-                return (r);
-        return (c_root(i, r + 1));
+if (r * r > i)
+return (-1);
+if (r * r == i)
+return (r);
+return (c_root(i, r + 1));
 }
 /**
  * _sqrt_recursion - function returns the natural square root of a number
