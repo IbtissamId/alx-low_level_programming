@@ -27,9 +27,9 @@ for (cpt1 = 0; cpt1 < height; cpt1++)
 	m[cpt1] = malloc(sizeof(int) * width);
 	if (m[cpt1] == NULL)
 	{
+		for (; cpt1 >= 0; cpt1--)
+			free(m[cpt1]);
 		free(m);
-		for (cpt2 = 0; cpt1 <= cpt2; cpt2++)
-			free(m[cpt2]);
 		return (NULL);
 	}
 }
