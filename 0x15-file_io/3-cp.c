@@ -55,7 +55,7 @@ void close_file(int x)
  */
 int main(int argc, char *argv[])
 {
-	int from, to, r, w;
+	int b, t, i, j;
 	char *buf;
 
 	if (argc != 3)
@@ -64,7 +64,7 @@ int main(int argc, char *argv[])
 		exit(97);
 	}
 
-	buf = create_buffer(argv[2]);
+	buf = create_buf(argv[2]);
 	b = open(argv[1], O_RDONLY);
 	i = read(b, buf, 1024);
 	t = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
